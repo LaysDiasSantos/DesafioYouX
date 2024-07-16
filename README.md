@@ -4,7 +4,7 @@ Este projeto consiste em sistema para o cadastro de clientes e vendas de uma emp
 - Para a exibição do mapa, utilizei a biblioteca LeafletJS
 
 ## Configuração
-Para executar o projeto localmente, você deve ter um ambiente de desenvolvimento Java com Spring Boot, a versão do framework Spring Boot deve ser a 2.7.3 e o Java a partir da versão 11. O banco de dados PostgreSǪĮ na versão 14. 
+Para executar o projeto localmente, você deve ter um ambiente de desenvolvimento Java com Spring Boot, a versão do framework Spring Boot deve ser a 2.7.3 e o Java a partir da versão 11. O banco de dados PostgreSQL na versão 14. 
 Recomendo a utilização da Eclipse IDE.
 
 
