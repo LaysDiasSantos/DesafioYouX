@@ -8,12 +8,13 @@ Recomendo a utilização da Eclipse IDE.
 
 Para executar o projeto, siga os seguintes passos:
 
-1. Clone este repositório em sua máquina;
-2. Abra a IDE e importe o projeto;
-3. Crie o banco de dados chamado 'sistema' no seu postgree;
-4. abra o arquivo application.properties e insira o seu username e password do postgree;
-5. Execute o projeto e aguarde até que a aplicação esteja completamente iniciada.
-6. Abra o seu navegador e acesse o seguinte endereço: 'http://localhost:8090/'.
+1. Faça o download deste repositório;
+2. extraia o arquivo .zip
+3. Abra a IDE e importe o projeto;
+4. Crie o banco de dados chamado 'sistema' no seu postgree;
+5. Abra o arquivo src/main/resources/**application.properties** e insira o seu username e password do postgres;
+6. Execute o projeto e aguarde até que a aplicação esteja completamente iniciada.
+7. Abra o seu navegador e acesse o seguinte endereço: 'http://localhost:8090/'.
 ### A tela de menu será exibida com as seguinte opções:
 
 Lista de clientes:
