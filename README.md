@@ -1,5 +1,7 @@
 # DesafioYouX
 Este projeto consiste em sistema para o cadastro de clientes e vendas de uma empresa, utilizando HTML, CSS, JavaScript e Thymeleaf para o frontend e Java com Spring Boot para o backend.
+#### Biblioteca usada:
+- Para a exibição do mapa, utilizei a biblioteca LeafletJS
 
 ## Configuração
 Para executar o projeto localmente, você deve ter um ambiente de desenvolvimento Java com Spring Boot, a versão do framework Spring Boot deve ser a 2.7.3 e o Java a partir da versão 11. O banco de dados PostgreSǪĮ na versão 14. 
@@ -8,9 +10,8 @@ Recomendo a utilização da Eclipse IDE.
 
 Para executar o projeto, siga os seguintes passos:
 
-1. Faça o download deste repositório;
-2. extraia o arquivo .zip
-3. Abra a IDE e importe o projeto;
+1. Clone este repositório em sua máquina ou faça o download e extraia o arquivo .zip;
+3. Abra a IDE e importe o projeto escolhendo a opção: Maven > Existing Maven Projects;
 4. Crie o banco de dados chamado 'sistema' no seu postgree;
 5. Abra o arquivo src/main/resources/**application.properties** e insira o seu username e password do postgres;
 6. Execute o projeto e aguarde até que a aplicação esteja completamente iniciada.
