@@ -6,8 +6,8 @@ import com.example.demo.testepratico.model.Venda;
 import com.example.demo.testepratico.repository.ClienteRepository;
 import com.example.demo.testepratico.service.ClienteService;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.Valid;
 
 import com.example.demo.testepratico.repository.VendaRepository;
 
