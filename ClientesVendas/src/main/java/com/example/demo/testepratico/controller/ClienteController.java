@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 
 import com.example.demo.testepratico.repository.ClienteRepository;
 import com.example.demo.testepratico.repository.VendaRepository;
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 import com.example.demo.testepratico.model.Cliente;
 
