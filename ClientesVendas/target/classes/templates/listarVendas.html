@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Listar Vendas</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <h1>Lista de Vendas</h1>
+
+    <div class="search-add-container">
+        <form th:action="@{/pesquisarVenda}" method="get">
+            <input type="text" name="nome" placeholder="Pesquisar pelo nome do cliente" />
+            <button type="submit" class="btn btn-primary btn-sm">Pesquisar</button>
+        </form>
+        <a th:href="@{/criarVenda}">
+            <button class="btn btn-success btn-sm">Adicionar nova venda</button>
+        </a>
+    </div>
+
+    <table>
+        <thead>
+            <tr class="table-success">
+                <th>Cliente</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Valor</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="venda : ${listarVendas}">
+                <td th:text="${venda.cliente.nome}"></td>
+                <td th:text="${venda.data}"></td>
+                <td th:text="${venda.status}"></td>
+                <td th:text="${venda.valor}"></td>
+                <td class="table-actions">
+                    <a th:href="@{/editarVenda/{codigo}(codigo=${venda.codigo})}">
+                        <button class="btn btn-primary btn-sm">Editar</button>
+                    </a>
+                    <a th:href="@{/excluirVenda(codigo=${venda.codigo})}">
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align: center">
+        <a th:href="@{/index}"><button class="btn btn-danger btn-sm">Voltar</button> </a>
+    </div>
+</body>
+
+</html>

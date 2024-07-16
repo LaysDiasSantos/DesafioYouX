@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+
+<body>
+    <h1 style="text-align: left">Lista de Clientes</h1>
+
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Deseja realmente excluir este item?</p>
+            <div class="modal-buttons">
+                <button id="confirmDelete" class="btn btn-danger">Confirmar</button>
+                <button id="cancelDelete" class="btn btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div th:if="${error}" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+
+    <div class="search-add-container">
+        <form th:action="@{/pesquisar}" method="get">
+            <input type="text" name="cnpj" placeholder="Digite o CNPJ do cliente que deseja pesquisar" />
+            <button type="submit" class="btn btn-primary btn-sm">Pesquisar</button>
+        </form>
+        <a th:href="@{/criarCliente}">
+            <button class="btn btn-success btn-sm">+ Cadastrar cliente</button>
+        </a>
+    </div>
+
+    <table>
+        <thead>
+            <tr class="table-success">
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="client : ${listarClientes}">
+                <td th:text="${client.nome}"></td>
+                <td th:text="${client.cnpj}"></td>
+                <td th:text="${client.email}"></td>
+                <td th:text="${client.telefone}"></td>
+                <td class="table-actions">
+                    <a th:href="@{/exibirEditarCliente(codigo=${client.codigo})}">
+                        <button class="btn btn-primary btn-sm">Editar</button>
+                    </a>
+                    <a th:href="@{/removerCliente(codigo=${client.codigo})}">
+                        <button class="btn btn-danger btn-sm">Excluir</button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align: center">
+        <a th:href="@{/index}"><button class="btn btn-danger btn-sm">Voltar</button> </a>
+    </div>
+
+</body>
+
+</html>
